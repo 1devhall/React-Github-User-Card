@@ -30,7 +30,10 @@ class CardItems extends React.Component {
   componentDidMount() {
     axios
       .get(`https://api.github.com/users/1devhall/followers`)
-      .then(res => this.setState(res));
+      .then(res => {
+        console.log('!!!!!!!!!', res) 
+        this.setState(res)
+      })
   }
   
   render() {
